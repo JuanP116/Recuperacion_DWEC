@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>    
+        let contador=0;
+        function addParagraph(){    
+            let p =document.getElementsByTagName("p");
+            let texto = document.createTextNode(`Parrafo ${contador+1}`);  
+            let color=document.getElementById("txtColor")
+            p[contador].appendChild(texto);
+            p[contador].style.color=color.value;
+            contador++;
+
+        }    
+    </script>
+    <p></p>    
+    <p></p>  
+    <p></p>    
+    <p></p>    
+    <label>Color del párrafo</label><input type="text" id="txtColor" value="blue" /></br>    
+    <input type="button" onclick="addParagraph();" value="Añadir párrafos"/>    
+</body>
+</html>

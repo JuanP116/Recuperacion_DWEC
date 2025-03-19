@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <h1>Modificacion de tamaño de texto</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur at eum minima a tenetur autem quae amet officia, omnis, provident ab suscipit nihil natus ducimus accusamus delectus cupiditate pariatur ipsa?
+        Quia commodi non id maxime iure voluptatem quidem rerum modi fugit odit eius obcaecati nemo tempore debitis officiis delectus a voluptate excepturi ex, quo, quaerat assumenda quis! Saepe, molestias amet!
+        Totam iusto autem libero dolor ut vel dolore illo nesciunt reiciendis inventore, facere suscipit dolorem, esse rerum est minus dignissimos voluptatum? Assumenda obcaecati ullam eius, repellat cupiditate expedita odio quos?
+        Odit repellat exercitationem illum. Ducimus possimus quibusdam omnis temporibus dicta, quis sapiente molestias atque! Tempora perferendis doloribus beatae odio explicabo obcaecati deserunt quod necessitatibus repudiandae velit, non numquam voluptate possimus.
+        Tenetur vel perferendis earum sint repellendus repudiandae voluptas quisquam adipisci ea porro, quae soluta veritatis blanditiis distinctio quia illo praesentium impedit dolores iste natus sed quidem incidunt corrupti! Tempore, atque.
+        Corporis autem eveniet eaque aliquam cumque. Aliquid natus libero tenetur. Asperiores dolor possimus nesciunt delectus blanditiis labore voluptatibus eius molestias corrupti animi. Consectetur quaerat ipsum numquam sequi ratione officiis error.
+        Officia qui nisi expedita, quaerat labore sit recusandae praesentium perferendis aliquam minima culpa inventore quam voluptas molestiae id, laudantium doloremque! Doloremque consequuntur nostrum placeat expedita? Aliquid fuga illum laboriosam cum!
+        Corporis obcaecati quia iusto a perspiciatis suscipit voluptatum totam nisi placeat assumenda repellat dignissimos commodi sed distinctio incidunt, dolorum fugit dolore delectus beatae. Inventore expedita labore eum a aliquam necessitatibus?
+        Odio quaerat libero error ipsum rerum perferendis delectus voluptate excepturi placeat fugiat, at quam quae amet laborum aspernatur labore, eveniet odit sapiente aperiam eius illo temporibus nostrum explicabo dolores! Numquam.
+        Facilis earum minus libero voluptatem labore optio atque quas iusto quae eius unde, soluta accusamus necessitatibus maiores animi. Ducimus odit quidem minima incidunt tempora cumque non est numquam magni rem!</p>
+    
+        <form action="#">
+            <label for="tamaño">Seleccionar tamaño</label><select name="tamaño" id="tamano">
+                <option value="small">small</option>
+                <option value="medium">medium</option>
+                <option value="large">large</option>
+            </select>
+            <input type="button" value="Enviar" onclick="cambiarTamaño()">
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function cambiarTamaño() {
+        div = document.getElementById("div");
+        select = document.getElementById("tamano");
+        div.style.fontSize=select.value;
+    }
+</script>

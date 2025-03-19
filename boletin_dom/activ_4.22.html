@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista Dinamica</h1>
+    <ul id="ul">
+
+    </ul>
+    
+    <input type="text" id="texto">
+    <input type="button" onclick="añadirConInsertAdjacentHTML()" value="añadir Con InsertAdjacentHTML">
+    <input type="button" onclick="añadirConCreateElement()" value="añadir Con createElement">
+
+</body>
+</html>
+<script>
+    function añadirConCreateElement(){
+        let ul = document.getElementById("ul");
+        let li = document.createElement("li")
+        let texto = document.getElementById("texto");
+        let textoCompleto = document.createTextNode(`${texto.value}`);
+        li.appendChild(textoCompleto);
+        ul.appendChild(li);
+    }
+
+    function añadirConInsertAdjacentHTML(){
+        let ul = document.getElementById("ul");
+        let texto = document.getElementById("texto");
+        ul.insertAdjacentHTML("beforeend",`<li>${texto.value}</li>`);
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        
+    </div>
+    <button onclick="crearParrafoObjetos()">Crear Div(Objetos)</button>
+    <button onclick="crearParrafoHTML()">Crear Div(HTML)</button>
+</body>
+</html>
+<script>
+    let contador = 1;
+    function crearParrafo(){
+        let div=document.getElementById("div");
+        let p=document.createElement("p");
+        let texto = document.createTextNode(`Parrafo ${contador}`);
+        p.appendChild(texto);
+        div.appendChild(p);
+        contador++;
+
+    }
+
+    function crearParrafoHTML() {
+        let p=document.createElement('p');
+
+        p.innerHTML=`Párrafo ${contador}`;
+
+        let div=document.getElementById('div');
+
+        div.appendChild(p);
+ 
+           contador++;
+    }
+</script>

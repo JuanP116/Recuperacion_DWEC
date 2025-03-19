@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto">
+    <input type="button" value="Insertar texto" onclick="insertarTexto()">
+
+    <table id="table">
+
+    </table>
+</body>
+</html>
+<script>
+    let contador=1;
+    function insertarTexto() {
+        let tabla = document.getElementById("table");
+        let tr = document.createElement("tr");
+        tr.setAttribute("id", contador);
+        let texto = document.getElementById("texto"); 
+        tr.insertAdjacentHTML("beforeend",`<td>${texto.value}</td><td><input type="button" value="copiar encima" onclick="copiarEncima(${contador})"></td><td><input type="button" value="borrar" onclick="borrar(${contador})"></td><td><input type="button" value="actualizar" onclick="actualizar(${contador})"></td>`)
+        tabla.appendChild(tr);
+        contador++;
+    }
+
+    function borrar(index) {
+        let tr = document.getElementById(index);
+        tr.remove();
+    }
+</script>
