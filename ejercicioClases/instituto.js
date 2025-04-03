@@ -21,19 +21,7 @@ let Alumno = class {
     }
 
     obtenerNotasMedias() {
-        const notasMedias = {};
-        this.notas.forEach(nota => {
-            if (!notasMedias[nota.asignatura]) {
-                notasMedias[nota.asignatura] = [];
-            }
-            notasMedias[nota.asignatura].push(nota.nota);
-        });
-        for (const asignatura in notasMedias) {
-            const suma = notasMedias[asignatura].reduce((a, b) => a + b, 0);
-            const media = suma / notasMedias[asignatura].length;
-            notasMedias[asignatura] = media;
-        }
-        return notasMedias;
+        
     }
 
 

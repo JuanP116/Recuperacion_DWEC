@@ -27,6 +27,7 @@ function filtrarProductos(idCategoria) {
 	}
 	return productos;
 } 
+
 function filtrarProductosConId(id) {
 	let productos=[];
 	for (let i = 0; i < PRODUCTOS.length; i++) {
@@ -36,7 +37,6 @@ function filtrarProductosConId(id) {
 	}
 	return productos;
 }
-
 
 addEventListener("load",  cambiarNombreCategorias())
 
@@ -83,9 +83,3 @@ function mostrarCaracteristicas(id) {
 		caracteristicasDiv.appendChild(li);
 	}
 };
-
-
-
-
-
-
