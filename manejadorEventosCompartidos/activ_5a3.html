@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Evento</h1>
+    localidad: 
+    <select name="localidades" id="localidades">
+        <option value="Utrera">Utrera</option>
+        <option value="Los Palacios">Los Palacios</option>
+        <option value="Dos Hermanas">Dos Hermanas</option>
+    </select><br>
+
+    <p id="p">Localidad seleccioanada:  </p>
+
+    <script>
+        const input = document.getElementById('localidades');
+        const saludo = document.getElementById('p');
+    
+        input.addEventListener('input', () => {
+          saludo.textContent = 'Localidad seleccioanada: ' + input.value;
+        });
+      </script>
+</body>
+</html>

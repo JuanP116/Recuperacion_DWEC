@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manejador eventos compartidos(ver consola depuracion) </h1>
+    <input type="button" id="boton1" value="boton1">
+    <input type="button" id="boton2" value="boton2">
+
+    <div id="div1"  style="width: 200px; height: 200px; background-color: red;">
+        <p>hola</p>
+        <p>hola</p>
+    </div>
+    <div id="div2" style="width: 200px; height: 200px; background-color: red;">
+        <p>hola</p>
+        <p>hola</p>
+    </div>
+
+    <script>
+        function iniciar() {
+            document.querySelector("#boton1").addEventListener("click", miManejador);
+            document.querySelector("#boton2").addEventListener("click", miManejador);
+            document.querySelector("#div1").addEventListener("mouseenter", miManejador);
+            document.querySelector("#div2").addEventListener("mouseenter", miManejador);
+        }; 
+        
+        function miManejador(evt){
+            console.log(evt);
+            console.log(evt.target);
+            console.log(evt.type);
+        };
+        
+        addEventListener("load", iniciar); 
+    </script>
+</body>
+</html>

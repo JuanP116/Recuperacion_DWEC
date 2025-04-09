@@ -21,6 +21,10 @@ let Alumno = class {
     }
 
     obtenerNotasMedias() {
+        let asignaturas = {};
+        let medias = {};
+        let suma=0;
+        let contador=0;
         
     }
 

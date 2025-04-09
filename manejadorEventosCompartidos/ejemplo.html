@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="boton1" value="Botón 1">
+    <input type="button" id="boton2" value="Botón 2">
+    <select name="aulas" id="aulas">
+        <option value="1">Aula 1</option>
+        <option value="1">Aula 2</option>
+        <option value="1">Aula 3</option>
+    </select><br>
+    <input type="text" name="nombre" id="nombre"><br>
+
+    <script>
+        function iniciar() {
+            document.querySelector("#boton1").addEventListener("click", miManejador);
+            document.querySelector("#boton2").addEventListener("click", miManejador);
+            document.querySelector("#aulas").addEventListener("change", miManejador);
+            document.querySelector("#nombre").addEventListener("keydown", miManejador);
+        }; 
+        
+        function miManejador(evt){
+            console.log(evt);
+            console.log(evt.target);
+            console.log(evt.type);
+            if (evt.type=="keydowwn") alert("keyCode: " + evt.keyCode);
+            //if (evt.target.id=="boton1") alert("Has pulsado el boton 1")
+            //if (evt.target.id=="boton2") alert("Has pulsado el boton 2")
+        };
+        
+        addEventListener("load", iniciar); 
+    </script>
+</body>
+</html>

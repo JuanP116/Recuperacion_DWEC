@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Evento</h1>
+    Nombre:<input type="text" id="nombre" ><br>
+    <p id="p">Hola </p>
+
+    <script>
+        const input = document.getElementById('nombre');
+        const saludo = document.getElementById('p');
+    
+        input.addEventListener('input', () => {
+          saludo.textContent = 'Hola ' + input.value;
+        });
+      </script>
+</body>
+</html>
